@@ -10,7 +10,7 @@ spring:
       ddl-auto: none
     show-sql: true
 server:
-  port: ${PORT:8092}
+  port: ${PORT:9156}
 
 eureka:
   client:
