@@ -21,3 +21,17 @@ eureka:
 
 
 key: ABCDabcd1234
+
+keycloak:
+  auth-server-url: ${KEYCLOAK_AUTH_SERVER_URL:http://localhost:8080/auth}
+  autodetect-bearer-only: true
+  resource: farmacia
+  credentials:
+    secret: GqNti8pigIbn1TSktoiFq0ptsSYKG3fc
+  realm: 5to
+  securityConstraints:
+    - securityCollections:
+        - patterns:
+            - /client/*
+  ssl-required: external
+  use-resource-role-mappings: false
